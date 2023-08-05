@@ -13,6 +13,12 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
+const btnRules = document.querySelector('.btn--rules');
+const btnPlayers = document.querySelector('.btn--players');
+
+const modal2 = document.querySelector('.modal2');
+const btnCloseModal2 = document.querySelector('.enter-name');
+
 let scores, currentScore, activePlayer, playing;
 
 // Starting conditions
@@ -125,3 +131,24 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+btnPlayers.addEventListener('click', function () {
+  modal2.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+});
+
+const closeModal2 = function () {
+  modal2.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnCloseModal2.addEventListener('click', function () {
+  let nameOne = document.getElementById('player1--name').value;
+  let nameTwo = document.getElementById('player2--name').value;
+  if (nameOne !== '' && nameTwo !== '') {
+    document.querySelector('#name--0').innerHTML = nameOne;
+    document.querySelector('#name--1').innerHTML = nameTwo;
+    closeModal2();
+  } else closeModal2();
+});
+overlay.addEventListener('click', closeModal2);

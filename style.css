@@ -133,6 +133,10 @@ main {
   top: 4rem;
 }
 
+.btn--players {
+  top: 10rem;
+}
+
 .btn--rules {
   top: 32rem;
 }
@@ -156,7 +160,7 @@ main {
 .dice {
   position: absolute;
   left: 50%;
-  top: 16.5rem;
+  top: 18rem;
   transform: translateX(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
@@ -199,6 +203,47 @@ main {
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+
+.modal2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  color: #0fdacf;
+  font-size: large;
+  background-color: rgb(43, 38, 38);
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.enter-name {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #0fdacf;
+  cursor: pointer;
+  border: none;
+  background: none;
+  background-color: white;
+  background-color: rgba(121, 108, 108, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+#player1--name,
+#player2--name {
+  background-color: #444;
+  color: #0fdacf;
+  text-align: center;
+  border: none;
+  font-size: medium;
 }
 
 .overlay {
